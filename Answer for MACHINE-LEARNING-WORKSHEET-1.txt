@@ -1,0 +1,161 @@
+                   MACHINE LEARNING WORKSHEET – 1
+-------------------------------------------------------------------------------------------
+
+In Q1 to Q7, only one option is correct, Choose the correct option:
+
+1.    The value of correlation coefficient will always be:
+
+A) between 0 and 1                                  B) greater than -1
+
+C) between -1 and 1                                 D) between 0 and -1
+
+Ans: C) between -1 and 1
+
+2.    Which of the following cannot be used for dimensionality reduction?
+
+A) Lasso Regularisation                      B) PCA
+
+C) Recursive feature elimination             D) Ridge Regularisation
+
+Ans: C) Recursive feature elimination
+
+3.    Which of the following is not a kernel in Support Vector Machines?
+
+A) linear                         B) Radial Basis Function
+
+C) hyperplane                     D) polynomial
+
+Ans: C) hyperplane
+
+4.    Amongst the following, which one is least suitable for a dataset having non-linear decision boundaries?
+
+A) Logistic Regression                           B) Naïve Bayes Classifier
+
+C) Decision Tree Classifier                      D) Support Vector Classifier
+
+Ans: D) Support Vector Classifier
+
+5.    In a Linear Regression problem, ‘X’ is independent variable and ‘Y’ is dependent variable, where ‘X’ represents weight in pounds. 
+If you convert the unit of ‘X’ to kilograms, then new coefficient of ‘X’ will be?
+(1 kilogram = 2.205 pounds)
+
+A) 2.205 × old coefficient of ‘X’                          B) same as old coefficient of ‘X’
+
+C) old coefficient of ‘X’ ÷ 2.205                          D) Cannot be determined
+
+Ans: B) same as old coefficient of ‘X’
+
+6.    As we increase the number of estimators in ADABOOST Classifier, what happens to the accuracy of the model?
+
+A) remains same                                      B) increases
+
+C) decreases                                         D) none of the above
+
+Ans: A) remains same
+
+7.    Which of the following is not an advantage of using random forest instead of decision trees?
+
+A) Random Forests reduce overfitting
+
+B) Random Forests explains more variance in data then decision trees
+
+C) Random Forests are easy to interpret
+
+D) Random Forests provide a reliable feature importance estimate
+
+Ans: C) Random Forests are easy to interpret
+
+In Q8 to Q10, more than one options are correct, Choose all the correct options:
+
+8.    Which of the following are correct about Principal Components?
+
+A) Principal Components are calculated using supervised learning techniques
+
+B) Principal Components are calculated using unsupervised learning techniques
+
+C) Principal Components are linear combinations of Linear Variables.
+
+D) All of the above
+
+Ans: D) All of the above
+
+9.    Which of the following are applications of clustering?
+
+A) Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty
+index, employment rate, population and living index.
+
+B) Identifying loan defaulters in a bank on the basis of previous years’ data of loan accounts.
+
+C) Identifying spam or ham emails
+
+D) Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar levels.
+
+Ans: A and D
+
+10.  Which of the following is(are) hyper parameters of a decision tree?
+
+A) max_depth                                           B) max_features
+
+C) n_estimators                                        D) min_samples_leaf
+
+Ans: A, B and D
+
+Q10 to Q15 are subjective answer type questions, Answer them briefly.
+
+11.  What are outliers? Explain the Inter Quartile Range(IQR) method for outlier detection.
+
+Ans: 
+An outlier is a data that differs significantly from observations. It may be caused due to variability of data or  
+in the measurement data or it may indicate experimental error. Outliers are sometimes excluded from the data set for our analysis purpose.
+So Inter Quartile Range(IQR) is the method by which we can find the outliers in our data. 
+IQR is the mathematical rule, where we will distribute or data from minimum to maximum and the data distributes from minimum to 25% and 
+the data distributes from 75% to 100% will consider as outlier data. So the point at 25% we are saying first quartile (Q1) and point at 
+50% we are saying second quartile (Q2) and the point at 75% we are saying third quartile (Q3), so based on this the formula IQR is the 
+first quartile subtracted from the third quartile i.e. IQR = Q3 – Q1.So an outlier in a distribution is a number that is more than 1.5 
+times the length of the box away from either the lower or upper quartiles. Speciﬁcally, if a number is less than Q1 – 1.5×IQR or 
+greater than Q3 + 1.5×IQR, then it is an outlier.
+
+12.  What is the primary difference between bagging and boosting algorithms?
+
+Ans: 
+Bagging and Boosting are the two types of methods in data science for Ensemble Learning.
+ 
+Bagging: Bootstrap Aggregation which is canlled Bagging is a general purpose method or procedure for reducing the variable of a statistical
+learning method by generating additional data for training from dataset using combinations with repetitions to produce multi-sets of the 
+original data. Also it improves the stability and accuracy of machine learning algorithms used in statistical classification and regression.
+Boosting: Boosting is an algorithms which converts weak learner to strong learners. By using this we can improve the model predictions of 
+any given learning algorithm. The idea of boosting is to train weak learners sequentially, each trying to correct its predecessor.
+So we can say thata boosting is an incremental/iterative technique which adjusts the weight of an observation based on the last classification.
+If the problem is that the single model gets a very low performance, Bagging will rarely get a better bias. However, Boosting could generate a 
+combined model with lower errors as it optimises the advantages and reduces pitfalls of the single model. For this reason, Bagging is effective 
+more often than Boosting.
+
+13.  What is adjusted R² in logistic regression. How is it calculated?
+
+Ans: 
+Adjusted R2 value tells us how much variance in the dependent variable would be accounted for if the model had been derived from the population
+from which the sample was taken. Adjusted R2 value can be calculated based on value of R-squared, number of independent variables (predictors), 
+total sample size. Every time when we add a independent variable to a model, the R-squared increases, even though the independent variable is 
+insignificant. Also adjusted R2 is used to compare the goodness-of-fit for regression models that contain differing numbers of independent variables.
+
+14.  What is the difference between standardisation and normalisation?
+
+Ans: 
+Standardization transforms data to have a mean of zero and a standard deviation of 1. 
+Normalization usually means to scale a variable to have a values between 0 and 1. 
+
+15.  What is cross-validation? Describe one advantage and one disadvantage of 
+using cross-validation.
+
+Ans: 
+Cross-validation is a technique in which we can train our model using the subset of the data-set and then evaluate using the complementary subset
+of the data-set where we generally splits the input data into k subsets of data which is known as folds and simply we are sayings k-folds.
+Advantages:
+1) More accurate estimate.
+2) More “efficient” use of data for both training and testing.
+Disadvantages:
+1) Higher bias due to smaller training set for each iteration.
+2) Lower bias due to larger training set.
+3) lengthy and time taken for execution if data is huge.
+
+
