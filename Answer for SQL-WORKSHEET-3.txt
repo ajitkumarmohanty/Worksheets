@@ -1,0 +1,81 @@
+    WORKSHEET-3 SQL
+-----------------------------------------------------------------------------------------------------
+
+1.    Write SQL query to create table Customers.
+
+Ans: 
+create table customers (customerNumber int primary key, customerName char(50),contactLastName char(20),contactFirstName char(50),phone int(10),
+addressLine1 varchar(30),addressLine2 varchar(30),city char(20),state char(20),postalCode int(10),country char(20), salesRepEmployeeNumber int(10),
+creditLimit int(20));
+
+2.    Write SQL query to create table Orders.
+
+Ans:
+create table orders (orderNumber int primary key, orderDate date, requiredDate date, shippedDate date, status char(5), comments varchar(100), 
+customerNumber int references customers);
+
+3.    Write SQL query to show all the columns data from the Orders Table.
+Ans: desc orders;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| orderNumber    | int          | NO   | PRI | NULL    |       |
+| orderDate      | date         | YES  |     | NULL    |       |
+| requiredDate   | date         | YES  |     | NULL    |       |
+| shippedDate    | date         | YES  |     | NULL    |       |
+| status         | char(5)      | YES  |     | NULL    |       |
+| comments       | varchar(100) | YES  |     | NULL    |       |
+| customerNumber | int          | YES  |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+
+4.    Write SQL query to show all the comments from the Orders Table.
+
+Ans: select comments from orders;
+
+5.    Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+
+Ans: select orders.orderDate, orderdetails.quantityOrdered from orders inner join orderdetails on orders.orderNumber=orderdetails.orderNumber  
+where orders.orderDate= "09-25-2020";
+
+6.    Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table.
+
+Ans: select employeNumber,lastName,firstName from employees;
+
+7.    Write a SQL query to show all orderNumber, customerName of the person who placed the respective order.
+
+Ans: select orders.orderNumber,customers.customerName from orders inner join customers on orders.customerNumber=customers.customerNumber
+where orders.customerNumber=234;
+
+8.    Write a SQL query to show name of all the customers in one column and salerepemployee name in another column.
+
+Ans: select customerName,  salesRepEmployeeNumber from customers;
+
+9.    Write a SQL query to show Date in one column and total payment amount of the payments made on that date from the payments table.
+
+Ans: select paymentDate, sum(amount) from payments where paymentDate = "09-25-2020";
+
+10.  Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+
+Ans: select productName, MSRP, productDescription from products;
+
+11.  Write a SQL query to print the productName, productDescription of the most ordered product.
+
+Ans: select p.productName, p.productDescription from products p, orderdetails od where p.productCode=od.productCode and 
+od.quantityOrdered = (select max(quantityOrdered) from orderdetails where p.productCode=od.productCode);
+
+12.  Write a SQL query to print the city name where maximum number of orders were placed.
+
+Ans: select city from customers where (select max(quantityOrdered) from orderdetails od, orders o where od.orderNumber=o.orderNumber);
+
+13.  Write a SQL query to get the name of the state having maximum number of customers.
+
+Ans: select state from customers where (select count(customerName) from customers);
+
+14.  Write a SQL query to print the employee number in one column and Full name of the employee in the second column for all the employees.
+
+Ans: select employeeNumber, concat(firstName,' ',lastName) as Name from employees;
+
+15.  Write a SQL query to print the orderNumber, customer Name and total amount paid by the customer for that order (quantityOrdered × priceEach).
+
+Ans: select o.orderNumber, c.customerName, p.amount  from orders o, customers c, payments p where c.customerNumber=p.customerNumber and p.amount= 200;
+
