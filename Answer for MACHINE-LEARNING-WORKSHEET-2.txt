@@ -1,0 +1,151 @@
+ANSWER FOR MACHINE LEARNING – WORKSHEET 2
+============================================================================
+
+In Q1 to Q5, only one option is correct, Choose the correct option:
+
+1.    In which of the following you can say that the model is overfitting?
+
+A) High R-squared value for train-set and High R-squared value for test-set.
+
+B) Low R-squared value for train-set and High R-squared value for test-set.
+
+C) High R-squared value for train-set and Low R-squared value for test-set.
+
+D) None of the above
+
+Ans: C) High R-squared value for train-set and Low R-squared value for test-set.
+
+2.    Which among the following is a disadvantage of decision trees?
+
+A) Decision trees are prone to outliers.
+
+B) Decision trees are highly prone to overfitting.
+
+C) Decision trees are not easy to interpret
+
+D) None of the above.
+
+Ans: B) Decision trees are highly prone to overfitting.
+
+3.    Which of the following is an ensemble technique?
+
+A) SVM                                                                          
+B) Logistic Regression
+C) Random Forest                                                              
+D) Decision tree
+
+Ans: C) Random Forest
+
+4.    Suppose you are building a classification model for detection of a fatal disease where detection of the disease
+is most important. In this case which of the following metrics you would focus on?
+
+A) Accuracy                                                                     
+B) Sensitivity
+C) Precision                                                                    
+D) None of the above.
+
+Ans:C) Precision 
+
+5.    The value of AUC (Area under Curve) value for ROC curve of model A is 0.70 and of model B is 0.85.
+Which of these two models is doing better job in classification?
+
+A) Model A                                                                      
+B) Model B
+C) both are performing equal  
+D) Data Insufficient
+
+Ans: B) Model B
+
+In Q6 to Q9, more than one options are correct, Choose all the correct options:
+
+6.    Which of the following are the regularization technique in Linear Regression??
+
+A) Ridge                                                                        
+B) R-squared
+C) MSE                                                                          
+D) Lasso
+
+Ans:B and C
+
+7.    Which of the following is not an example of boosting technique?
+
+A) Adaboost                                                                     
+B) Decision Tree
+C) Random Forest                                                              
+D) Xgboost.
+
+Ans: A and D
+
+8.    Which of the techniques are used for regularization of Decision Trees?
+
+A) Pruning                                                                      
+B) L2 regularization
+C) Restricting the max depth of the tree   
+D) All of the above
+
+Ans: D
+
+9.    Which of the following statements is true regarding the Adaboost technique?
+
+A) We initialize the probabilities of the distribution as 1/n, where n is the number of data-points
+B) A tree in the ensemble focuses more on the data points on which the previous tree was not performing well
+C) It is example of bagging technique
+D) None of the above
+
+Ans: A and C
+
+Q10 to Q15 are subjective answer type questions, Answer them briefly.
+
+10.  Explain how does the adjusted R-squared penalize the presence of unnecessary predictors in the model?
+
+Ans: 
+The adjusted R2 gives the idea of the percentage of variation explained by only the independent variables that actually affect the dependent variable.
+In regression analysis, it can be tempting to add more variables to the data as we think of them. Some of those variables will be significant, 
+but we can’t be sure that significance is just by chance so, the adjusted R2 will compensate for this by that penalizing for those extra variables.
+
+11.  Differentiate between Ridge and Lasso Regression.
+
+Ans:
+Lasso regression stands for Least Absolute Shrinkage and Selection Operator.The difference between ridge and lasso regression is that it tends to make 
+coefficients to absolute zero as compared to Ridge which never sets the value of coefficient to absolute zero.
+
+12.  What is VIF? What is the suitable value of a VIF for a feature to be included in a regression modelling?
+
+Ans:
+Variance Inflation Factor(VIF) is the quotient of the variance in a model with multiple terms by the variance of a model with one term alone. 
+It quantifies the severity of multicollinearity in an ordinary least squares regression analysis.Also VIF is the reciprocal of the tolerance value that means
+small VIF values indicates low correlation among variables under ideal conditions VIF<3 and it is acceptable if it is less than 10.
+
+13.  Why do we need to scale the data before feeding it to the train the model?
+
+Ans:
+It is a step of data pre processing which is applied to independent variables or features of data. It basically helps to normalise the data within a 
+particular range and also sometimes, it is helping us to for speeding up the calculations in an algorithm.
+
+14.  What are the different metrics which are used to check the goodness of fit in linear regression?
+
+Ans:
+There are different metrics which are used to check the goodness of fit in linear regression and these are R Squared, Adjusted R Squared, F Statistics, 
+RMSE/MSE. But in linear regression R squared is the measure of goodness of fit because this provides the proportion of variation in the outcome Y and 
+explained by the covariates X. This of course seems very reasonable, since R squared measures how close the observed Y values are to the predicted (fitted) 
+values from the model.
+
+15.  From the following confusion matrix calculate sensitivity, specificity, precision, recall and accuracy.
+Actual/Predicted   
+                 
+	True                False
+
+True    1000 (TP)           50 (FN)
+
+False   250  (FP)           1200 (TN)
+
+Ans:
+sensitivity= TP/(TP+FN)= 1000/(1000+50)=1000/1050=0.9523809523809523
+specificity= TN/(TN+FP)=1200/(1200+250)=1200/1450=0.8275862068965517
+precision= TP/(TP+FP)=1000/(1000+250)=1000/1250=0.8
+recall= TP/(TP+FN)=1000/(1000+50)=1000/1050=0.9523809523809523
+accuracy= (TP+TN)/(TP+FP+FN+TN)=(1000+1200)/(1000+250+50+1200)=2200/2500=0.88
+
+
+
+
