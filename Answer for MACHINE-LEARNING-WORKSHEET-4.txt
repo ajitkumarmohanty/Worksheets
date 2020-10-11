@@ -1,0 +1,134 @@
+MACHINE LEARNING – WORKSHEET 4
+
+In Q1 to Q8, only one option is correct, Choose the correct option:
+
+1.    Which of the following in sklearn library is used for hyper parameter tuning?
+
+A) GridSearchCV()                                            B) RandomizedCV()
+
+C) K-fold Cross Validation                                   D) None of the above
+
+Ans- A) GridSearchCV()
+
+2.    In which of the below ensemble techniques trees are trained in parallel?
+
+A) Random forest                                             B) Adaboost
+
+C) Gradient Boosting                                         D) All of the above
+
+Ans- D) All of the above
+
+3.    In machine learning, if in the below line of code: sklearn.svm.SVC (C=1.0, kernel='rbf', degree=3)
+
+we increasing the C hyper parameter, what will happen?
+
+A) The regularization will increase                       B) The regularization will decrease
+
+C) No effect on regularization                            D) kernel will be changed to linear
+
+Ans- A) The regularization will increase
+
+4.    Check the below line of code and answer the following questions: sklearn.tree.DecisionTreeClassifier(*, criterion='gini', splitter='best', 
+max_depth=None,min_samples_split=2)
+
+Which of the following is true regarding max_depth hyper parameter?
+
+A) It regularizes the decision tree by limiting the maximum depth up to which a tree can be grown.
+
+B) It denotes the number of children a node can have.
+
+C) both A & B
+
+D) None of the above
+
+Ans- C) both A & B
+
+5.    Which of the following is true regarding Random Forests?
+
+A) It's an ensemble of weak learners.
+
+B) The component trees are trained in series
+
+C) In case of classification problem, the prediction is made by taking mode of the class labels predicted by the component trees.
+
+D)None of the above
+
+Ans- C) In case of classification problem, the prediction is made by taking mode of 
+the class labels predicted by the component trees.
+
+6.    What can be the disadvantage if the learning rate is very high in gradient descent?
+
+A) Gradient Descent algorithm can diverge from the optimal solution.
+
+B) Gradient Descent algorithm can keep oscillating around the optimal solution and may not settle.
+
+C) Both of them
+
+D) None of them.
+
+Ans- C) Both of them
+
+7.    As the model complexity increases, what will happen?
+
+A) Bias will increase, Variance decrease              B) Bias will decrease, Variance increase
+C) both bias and variance increase                     D) Both bias and variance decrease.
+
+Ans- C) both bias and variance increase
+
+8.    Suppose I have a linear regression model which is performing as follows:Train accuracy=0.95 Test accuracy=0.75
+
+Which of the following is true regarding the model?
+
+A) model is underfitting                                   B) model is overfitting
+
+C) model is performing good                                D) None of the above
+
+Ans- A) model is underfitting 
+
+Q9 to Q15 are subjective answer type questions, Answer them briefly.
+
+9.    Suppose we have a dataset which have two classes A and B. The percentage of class A is 40% and percentage of class B is 60%. 
+Calculate the Gini index and entropy of the dataset.
+
+Ans- Gini index= 1-((40/100)2+(60/100)2)=0.48
+     Entropy= -((0.4log2(0.4)+(0.6log2(0.6))= 0.9709505944546686
+
+10.  What are the advantages of Random Forests over Decision Tree?
+Ans- Random forests are a strong modeling technique and much more robust than a decision tree. 
+They aggregate many decision trees to limit overfitting as well as error due to bias and therefore yield useful results
+
+11.  What is the need of scaling all numerical features in a dataset? Name any two techniques used for scaling.
+
+Ans- Feature Scaling or Standardization is a step of Data Pre Processing which is applied to independent variables or features of data. 
+It basically helps to normalise the data within a particular range. Sometimes, it also helps in speeding up the calculations in an algorithm.
+Basically there are two types of scaling used, one is Standarad Scaler and other is Min max Scaler.
+
+12.  Write down some advantages which scaling provides in optimization using gradient descent algorithm.
+
+Ans- Advantages of using gradient descent algorithm are,
+a) It is easier to fit into memory due to a single training sample being processed by the network.
+b) It is computationally fast as only one sample is processed at a time.
+c) For larger datasets it can converge faster as it causes updates to the parameters more frequently.
+
+13.  In case of a highly imbalanced dataset for a classification problem, is accuracy a good metric to measure the performance of the model. If not, why?
+
+Ans- No, in case of a highly imbalanced dataset for a classification problem accuracy is not a good metric to measure the performance of the model.
+As the target data i.e. classification is imbalanced, so we will see the precission and precission is the best way to measure the performance of the model.
+
+14.  What is “f-score" metric? Write its mathematical formula.
+
+Ans- In statistical analysis of binary classification, the F1 score (also F-score or F-measure) is a measure of a test's accuracy. 
+It is calculated from the precision and recall of the test, where the precision is the number of correctly identified positive results 
+divided by the number of all positive results, including those not identified correctly, and the recall is the number of correctly identified 
+positive results divided by the number of all samples that should have been identified as positive.
+
+The mathematical formula is, F1 Score = 2*((precision*recall)/(precision+recall))
+
+15.  What is the difference between fit(), transform() and fit_transform()?
+
+Ans- The fit() function calculates the values of these parameters and it takes the training data as an arguments, 
+which can be one array in the case of unsupervised learning, or two arrays in the case of supervised learning.
+The transform () function applies the values of the parameters on the actual data and gives the normalized value. 
+The fit_transform() function performs both in the same.
+
+
